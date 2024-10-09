@@ -10,3 +10,27 @@ def convert(number):
         return str(number)
 
     return "".join(save)
+
+#Second Version
+def convert2(number):
+    save = ''
+
+    if number % 3 == 0:
+        save += 'pling'
+    if number % 5 == 0:
+        save += 'plang'
+    if number % 7 == 0:
+        save += 'plong'
+
+    return save or f'{number}'
+
+#Thrid Version
+def convert3(number):
+    result = (('pling' if number % 3 == 0 else '') + 
+            ('plang' if number % 5 == 0 else '') +
+            ('plong' if number % 7 == 0 else ''))
+    
+    return result or number
+
+
+
