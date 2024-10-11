@@ -4,3 +4,9 @@ def is_pangram(sentence):
         if i not in sentence.lower():
             return False
     return True
+
+#Second Version 
+Import string
+
+def is_panagram2(sentence):
+    return set(string.ascii_lowercase).issubset(set(sentence.lower()))
